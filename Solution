@@ -1,0 +1,14 @@
+function well(x){
+
+let arrBad = [];
+let arrGood = [];
+
+  for (let i = 0; i < x.length; i++) {
+  	if (x[i] === 'bad') arrBad.push(i);
+    if (x[i] === 'good') arrGood.push(i);
+  }
+  
+  if (arrGood.length > 0 && arrGood.length <= 2) return 'Publish!';
+  if (arrGood.length > 2) return 'I smell a series!';
+  return 'Fail!';
+}
